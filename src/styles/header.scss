@@ -1,0 +1,14 @@
+@import './colors.scss';
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem;
+}
+
+.header-link {
+  color: $primary-color;
+  text-decoration: none;
+  font-family: montserrat;
+  margin-left: 2rem;
+}
