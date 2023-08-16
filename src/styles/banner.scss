@@ -1,0 +1,18 @@
+.banner-img {
+  object-fit: cover;
+  height: 11rem;
+  width: 95rem;
+  margin: 0 5rem;
+  filter: brightness(70%);
+  border-radius: 1rem;
+}
+
+.banner-text {
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 3rem;
+  position: relative;
+  bottom: 10.5rem;
+  display: flex;
+  justify-content: center;
+}

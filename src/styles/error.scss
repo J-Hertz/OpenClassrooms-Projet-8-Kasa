@@ -1,0 +1,29 @@
+@import './colors.scss';
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-404 {
+  color: $primary-color;
+  color: #ff6060;
+  font-size: 18rem;
+  font-family: 'Montserrat';
+  line-height: 0;
+}
+
+.error-text {
+  color: $primary-color;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+}
+
+.error-link {
+  color: $primary-color;
+  font-family: 'Montserrat';
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-bottom: 6rem;
+}
