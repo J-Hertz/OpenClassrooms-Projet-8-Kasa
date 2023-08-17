@@ -1,0 +1,12 @@
+@import './colors.scss';
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: $secondary-color;
+  margin: 5rem;
+  border-radius: 2rem;
+}

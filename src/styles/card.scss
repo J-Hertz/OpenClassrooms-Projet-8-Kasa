@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  margin: 3rem 3rem -2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 1rem;
+}
+
+.card-title {
+  width: 14rem;
+  display: flex;
+  position: relative;
+  bottom: 4rem;
+  right: 4rem;
+  flex-wrap: wrap;
+  font-family: montserrat;
+  color: white;
+  font-size: 1rem;
+}

@@ -7,6 +7,7 @@ import About from './pages/About'
 import Header from './components/Header'
 import Error from './components/Error'
 import Footer from './components/Footer'
+import logementsData from './data/logements.json'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
