@@ -1,0 +1,49 @@
+@import './colors.scss';
+
+.collapsible-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+.collapsible-button {
+  width: 70%;
+  height: 4rem;
+  padding: 1rem;
+  margin: 1rem 15%;
+  border: 0;
+  background-color: $primary-color;
+  color: white;
+  font-family: montserrat;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  justify-content: space-between;
+}
+
+.collapsible-content {
+  background-color: $secondary-color;
+  margin: -1rem 15% 1rem;
+  font-family: montserrat;
+  color: $primary-color;
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-radius: 0 0 0.5rem;
+
+  max-height: 0;
+
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-content.expanded {
+  max-height: 100%;
+}
+
+.collapsible-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapsible-icon.expanded {
+  transform: rotate(-180deg);
+}
