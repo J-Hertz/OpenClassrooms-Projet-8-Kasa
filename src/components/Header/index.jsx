@@ -5,8 +5,8 @@ import '../../styles/header.scss'
 function Header() {
   return (
     <div className="header-container">
-      <img src={logo} alt="logo" />
-      <nav>
+      <img className="header-logo" src={logo} alt="logo" />
+      <nav className="header-link-container">
         <Link className="header-link" to="/">
           Accueil
         </Link>

@@ -1,10 +1,18 @@
 @import './colors.scss';
 
+.header-logo {
+  width: 13rem;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   margin: 3rem 5rem;
   align-items: center;
+}
+
+.header-link-container {
+  display: flex;
 }
 
 .header-link {
@@ -13,4 +21,19 @@
   font-family: montserrat;
   margin-left: 2rem;
   font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    width: 30%;
+  }
+
+  .header-container {
+    margin: 2rem;
+  }
+
+  .header-link {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
 }

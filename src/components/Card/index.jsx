@@ -1,34 +1,26 @@
+import React, { useState } from 'react'
 import '../../styles/card.scss'
-/* import React, { useState } from 'react' */
 
 function Card({ accommodation }) {
-  /*  const [showDetails, setShowDetails] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails)
+  const handleClick = () => {
+    setIsOpen(!isOpen)
   }
 
-  if (showDetails) {
-    return (
-      <div className="card-details">
-        <img src={accommodation.cover} alt={accommodation.title} />
-        <h3>{accommodation.title}</h3>
-        <p>Description: {accommodation.description}</p>
-        <p>Prix: {accommodation.price}</p>
-
-      </div>
-    )
-  }
-*/
   return (
-    <div className="card">
+    <div className={`card ${isOpen ? 'open' : ''}`} onClick={handleClick}>
       <img
-        /*    onClick={toggleDetails} */
         className="card-image"
         src={accommodation.cover}
         alt={accommodation.title}
       />
       <h3 className="card-title">{accommodation.title}</h3>
+      {isOpen && (
+        <div className="additional-info">
+          {/* Render additional information here */}
+        </div>
+      )}
     </div>
   )
 }

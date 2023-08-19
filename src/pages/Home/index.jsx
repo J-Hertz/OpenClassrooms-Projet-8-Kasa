@@ -11,7 +11,7 @@ function Home() {
     <div>
       <Banner banner="home" />
       <div className="card-container">
-        {firstSixAcccommodations.map((accommodation, index) => (
+        {firstSixAcccommodations.map((accommodation) => (
           <Card key={accommodation.id} accommodation={accommodation} />
         ))}
       </div>
