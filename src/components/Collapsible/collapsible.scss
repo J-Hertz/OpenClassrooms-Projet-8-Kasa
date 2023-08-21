@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import '../../styles/colors.scss';
 
 .collapsible-container {
   display: flex;
@@ -10,7 +10,7 @@
   width: 70%;
   height: 4rem;
   padding: 1rem;
-  margin: 1rem 15%;
+  margin: 1rem 15% 0;
   border: 0;
   background-color: $primary-color;
   color: white;
@@ -24,20 +24,24 @@
 
 .collapsible-content {
   background-color: $secondary-color;
-  margin: -1rem 15% 1rem;
+  margin: 0 15% 1rem;
   font-family: montserrat;
   color: $primary-color;
   font-size: 1.2rem;
-  padding: 2rem;
-  border-radius: 0 0 0.5rem;
-
   max-height: 0;
+  height: 0;
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+  padding: 0 2rem;
 
-  transition: max-height 0.3s ease;
+  transition: height 0.3s ease, padding 0.3s ease;
 }
 
-.collapsible-content.expanded {
+.collapsible.expanded .collapsible-content {
   max-height: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: block;
 }
 
 .collapsible-icon {
