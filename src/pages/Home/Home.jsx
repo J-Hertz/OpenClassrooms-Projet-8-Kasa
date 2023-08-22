@@ -1,7 +1,7 @@
+import React from 'react'
 import Banner from '../../components/Banner/Banner'
-import Card from '../../components/Card/Card.jsx'
+import AccommodationFactory from '../../components/Accommodation/AccommodationFactory/AccommodationFactory'
 import accommodationsData from '../../data/logements.json'
-import '../../components/Card/card.scss'
 import './home.scss'
 import bannerImgHome from '../../assets/banner-home.png'
 
@@ -13,7 +13,13 @@ function Home() {
       <Banner bannerText={bannerText} imagePath={bannerImgHome} />
       <div className="card-container">
         {accommodationsData.map((accommodation) => (
-          <Card key={accommodation.id} accommodation={accommodation} />
+          <AccommodationFactory
+            key={accommodation.id}
+            type="Card"
+            id={accommodation.id}
+            title={accommodation.title}
+            cover={accommodation.cover}
+          />
         ))}
       </div>
     </div>
