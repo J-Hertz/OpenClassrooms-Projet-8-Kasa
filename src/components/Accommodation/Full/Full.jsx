@@ -1,37 +1,52 @@
 import React from 'react'
 import AccommodationData from '../../../data/logements.json'
 import Collapsible from '../../Collapsible/Collapsible.jsx'
+import Rating from '../../Rating/Rating.jsx'
+import Slider from '../../Slider/Slider.jsx'
 import './full.scss'
+import { useParams } from 'react-router-dom'
 
-function Full(props) {
+function Full(accommodation) {
   const currentAccommodation = AccommodationData.find(
-    (item) => item.id === props.id
+    (item) => item.id === accommodation.id
   )
+  const { id } = useParams()
 
-  const { title } = currentAccommodation
-  const { location } = currentAccommodation
-  const { tags } = currentAccommodation
-  const { host } = currentAccommodation
-  const { equipments } = currentAccommodation
-
-  const { description } = currentAccommodation
+  const {
+    title,
+    location,
+    tags,
+    host,
+    equipments,
+    rating,
+    description,
+    pictures,
+  } = currentAccommodation
 
   return (
-    <div>
+    <div className="full-container">
       <div>
-        <h1>{title}</h1>
-        <p>{location}</p>
+        <Slider images={pictures} />
       </div>
-      <div>
-        <p>{host.name}</p>
-        <img src={host.picture} alt={host.name} />
+      <div className="full-title-location-container">
+        <h1 className="full-title">{title}</h1>
+        <p className="full-location">{location}</p>
       </div>
-      <ul>
+      <div className="full-host-container">
+        <p className="full-host-name">{host.name}</p>
+        <img className="full-host-img" src={host.picture} alt={host.name} />
+      </div>
+      <ul className="full-tag-list">
         {tags.map((tag) => (
-          <li key={tag}>{tag}</li>
+          <li className="full-tag" key={tag}>
+            {tag}
+          </li>
         ))}
       </ul>
-      <div className="display-flex">
+      <div className="full-rating-container">
+        <Rating rating={rating} />
+      </div>
+      <div className="full-collapsible-container">
         <Collapsible context="full" title="Description" content={description} />
         <Collapsible
           context="full"

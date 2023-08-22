@@ -11,7 +11,12 @@ function About() {
       <Banner bannerText={bannerText} imagePath={bannerImgAbout} />
       <div className="collapsible-container">
         {aboutData.map((data, index) => (
-          <Collapsible key={index} title={data.title} content={data.content} />
+          <Collapsible
+            context="about"
+            key={index}
+            title={data.title}
+            content={data.content}
+          />
         ))}
       </div>
     </div>

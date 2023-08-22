@@ -1,0 +1,30 @@
+.slider-img {
+  height: 25rem;
+  width: 85rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin-bottom: -7rem;
+}
+
+.slider-arrow-left {
+  position: relative;
+  position: relative;
+  left: 6rem;
+  bottom: 1rem;
+  margin-left: -1rem;
+}
+
+.slider-arrow-right {
+  position: relative;
+  left: 84rem;
+  bottom: 8.75rem;
+}
+
+.slider-current-position {
+  color: white;
+  font-family: montserrat;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 4rem;
+}

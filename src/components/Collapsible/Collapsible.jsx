@@ -12,9 +12,10 @@ const Collapsible = ({ title, content, context }) => {
 
   return (
     <div
-      className={`collapsible ${isExpanded ? 'expanded' : ''} ${
-        context === 'full' ? 'full-context' : ''
-      }`}
+      className={`collapsible 
+      ${isExpanded ? 'expanded' : ''}
+      ${context === 'full' ? 'full-context' : ''}
+      ${context === 'about' ? 'about-context' : ''}`}
     >
       <button
         className={`collapsible-button ${isExpanded ? 'expanded' : ''}`}
