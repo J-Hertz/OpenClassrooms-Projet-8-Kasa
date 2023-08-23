@@ -65,3 +65,13 @@
   display: flex;
   margin-bottom: 3rem;
 }
+
+@media (max-width: 768px) {
+  .full-container {
+    flex-direction: column;
+  }
+
+  .full-collapsible-container {
+    flex-direction: column;
+  }
+}

@@ -60,3 +60,9 @@
 .about-context {
   margin: 1rem 15% 0;
 }
+
+@media (max-width: 768px) {
+  .about-context {
+    margin: 1rem 5% 0;
+  }
+}

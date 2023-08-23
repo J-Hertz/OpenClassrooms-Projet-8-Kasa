@@ -20,3 +20,26 @@
 .banner {
   height: 11rem;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    height: 4rem;
+    margin: 0 0 4rem;
+  }
+
+  .banner-img {
+    object-fit: cover;
+    height: 8rem;
+    margin: 0px 5%;
+    filter: brightness(70%);
+    border-radius: 1rem;
+    width: 90%;
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+    bottom: 7.5rem;
+    width: 14rem;
+    left: 8%;
+  }
+}

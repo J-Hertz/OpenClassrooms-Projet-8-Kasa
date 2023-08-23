@@ -28,3 +28,31 @@
   position: relative;
   bottom: 4rem;
 }
+
+@media (max-width: 768px) {
+  .slider-img {
+    width: 90%;
+    margin: 0 5%;
+    height: 16rem;
+  }
+
+  .slider-arrow-left {
+    width: 1.5rem;
+    left: 2.5rem;
+    bottom: -9.4rem;
+  }
+
+  .slider-arrow-right {
+    width: 1.5rem;
+    left: 23.5rem;
+    bottom: 9rem;
+  }
+
+  .slider-current-position {
+    bottom: 5rem;
+  }
+
+  .slider-container {
+    height: 18rem;
+  }
+}
