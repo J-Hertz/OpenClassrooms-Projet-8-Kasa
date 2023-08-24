@@ -23,23 +23,25 @@ function Slider({ images }) {
   return (
     <div className="slider-container">
       <img
-        className="slider-arrow-left"
-        src={arrowLeft}
-        alt="arrow left"
-        onClick={handlePrev}
-      ></img>
-      <img
         className="slider-img"
         src={images[currentIndex]}
         alt={`Slide ${currentIndex}`}
       />
-      <img
-        className="slider-arrow-right"
-        src={arrowRight}
-        alt="arrow right"
-        onClick={handleNext}
-      ></img>
-      <div className="slider-current-position">{currentPosition}</div>
+      <div className="slider-arrow-container">
+        <img
+          className="slider-arrow-left"
+          src={arrowLeft}
+          alt="arrow left"
+          onClick={handlePrev}
+        ></img>
+        <div className="slider-current-position">{currentPosition}</div>
+        <img
+          className="slider-arrow-right"
+          src={arrowRight}
+          alt="arrow right"
+          onClick={handleNext}
+        ></img>
+      </div>
     </div>
   )
 }

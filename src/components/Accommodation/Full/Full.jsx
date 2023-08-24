@@ -25,16 +25,10 @@ function Full(accommodation) {
 
   return (
     <div className="full-container">
-      <div>
-        <Slider images={pictures} />
-      </div>
+      <Slider images={pictures} />
       <div className="full-title-location-container">
         <h1 className="full-title">{title}</h1>
         <p className="full-location">{location}</p>
-      </div>
-      <div className="full-host-container">
-        <p className="full-host-name">{host.name}</p>
-        <img className="full-host-img" src={host.picture} alt={host.name} />
       </div>
       <ul className="full-tag-list">
         {tags.map((tag) => (
@@ -43,8 +37,14 @@ function Full(accommodation) {
           </li>
         ))}
       </ul>
-      <div className="full-rating-container">
-        <Rating rating={rating} />
+      <div className="full-host-rating-container">
+        <div className="full-host-container">
+          <p className="full-host-name">{host.name}</p>
+          <img className="full-host-img" src={host.picture} alt={host.name} />
+        </div>
+        <div className="full-rating-container">
+          <Rating rating={rating} />
+        </div>
       </div>
       <div className="full-collapsible-container">
         <Collapsible context="full" title="Description" content={description} />
