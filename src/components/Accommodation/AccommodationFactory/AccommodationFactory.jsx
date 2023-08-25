@@ -2,13 +2,11 @@ import React from 'react'
 import Full from '../Full/Full.jsx'
 import Card from '../Card/Card.jsx'
 
-function AccommodationFactory(accommodation) {
-  const { type, id, title, cover } = accommodation
-
+function AccommodationFactory({ type, accommodation }) {
   if (type === 'Full') {
-    return <Full id={id} />
+    return <Full accommodation={accommodation} />
   } else {
-    return <Card accommodation={{ id, title, cover }} />
+    return <Card accommodation={accommodation} />
   }
 }
 

@@ -1,11 +1,20 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import AccommodationFactory from '../../components/Accommodation/AccommodationFactory/AccommodationFactory.jsx'
+import { useParams, Navigate } from 'react-router-dom'
+import AccommodationData from '../../data/logements.json'
+import Full from '../../components/Accommodation/Full/Full.jsx'
 
-function AccommodationPage({ accommodation }) {
+function AccommodationPage() {
   const { id } = useParams()
 
-  return <AccommodationFactory key={id} id={id} type="Full" />
+  const selectedAccommodation = AccommodationData.find(
+    (accommodation) => accommodation.id === id
+  )
+
+  if (!selectedAccommodation) {
+    return <Navigate to="/error" /> // Utilisez Navigate pour rediriger vers la page d'erreur
+  }
+
+  return <Full accommodation={selectedAccommodation} />
 }
 
 export default AccommodationPage

@@ -3,14 +3,19 @@
 .collapsible-container {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 0;
+  margin: 0px 15%;
+  width: 70%;
+}
+
+.collapsible {
+  margin: 1rem 2.5%;
+  width: 100%;
 }
 
 .collapsible-button {
   width: 100%;
   height: 3rem;
   padding: 1rem;
-  //  margin: 1rem 15% 0;
   border: 0;
   background-color: $primary-color;
   color: white;
@@ -24,7 +29,6 @@
 
 .collapsible-content {
   background-color: $secondary-color;
-  // margin: 0 15% 1rem;
   font-family: montserrat;
   color: $primary-color;
   font-size: 1.2rem;
@@ -52,22 +56,9 @@
   transform: rotate(-180deg);
 }
 
-.full-context {
-  width: 40%;
-  margin: 0 5%;
-}
-
-.about-context {
-  margin: 1rem 15% 0;
-}
-
-@media (max-width: 768px) {
-  .about-context {
-    margin: 1rem 5% 0;
-  }
-
-  .full-context {
+@media (max-width: 1024px) {
+  .collapsible-container {
+    margin: 0 2.5%;
     width: 90%;
-    margin: 5%;
   }
 }

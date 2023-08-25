@@ -1,37 +1,20 @@
 import React from 'react'
-import AccommodationData from '../../../data/logements.json'
+
 import Collapsible from '../../Collapsible/Collapsible.jsx'
 import Rating from '../../Rating/Rating.jsx'
 import Slider from '../../Slider/Slider.jsx'
 import './full.scss'
-import { useParams } from 'react-router-dom'
 
-function Full(accommodation) {
-  const currentAccommodation = AccommodationData.find(
-    (item) => item.id === accommodation.id
-  )
-  const { id } = useParams()
-
-  const {
-    title,
-    location,
-    tags,
-    host,
-    equipments,
-    rating,
-    description,
-    pictures,
-  } = currentAccommodation
-
+function Full({ accommodation }) {
   return (
     <div className="full-container">
-      <Slider images={pictures} />
+      <Slider images={accommodation.pictures} />
       <div className="full-title-location-container">
-        <h1 className="full-title">{title}</h1>
-        <p className="full-location">{location}</p>
+        <h1 className="full-title">{accommodation.title}</h1>
+        <p className="full-location">{accommodation.location}</p>
       </div>
       <ul className="full-tag-list">
-        {tags.map((tag) => (
+        {accommodation.tags.map((tag) => (
           <li className="full-tag" key={tag}>
             {tag}
           </li>
@@ -39,19 +22,23 @@ function Full(accommodation) {
       </ul>
       <div className="full-host-rating-container">
         <div className="full-host-container">
-          <p className="full-host-name">{host.name}</p>
-          <img className="full-host-img" src={host.picture} alt={host.name} />
+          <p className="full-host-name">{accommodation.host.name}</p>
+          <img
+            className="full-host-img"
+            src={accommodation.host.picture}
+            alt={accommodation.host.name}
+          />
         </div>
         <div className="full-rating-container">
-          <Rating rating={rating} />
+          <Rating rating={accommodation.rating} />
         </div>
       </div>
       <div className="full-collapsible-container">
-        <Collapsible context="full" title="Description" content={description} />
+        <Collapsible title="Description" content={accommodation.description} />
         <Collapsible
           context="full"
           title="Équipements"
-          content={equipments.map((equipment) => (
+          content={accommodation.equipments.map((equipment) => (
             <li key={equipment}>{equipment}</li>
           ))}
         />

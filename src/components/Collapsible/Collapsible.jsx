@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import './collapsible.scss'
 
-const Collapsible = ({ title, content, context }) => {
+const Collapsible = ({ title, content }) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleCollapse = () => {
@@ -13,9 +13,7 @@ const Collapsible = ({ title, content, context }) => {
   return (
     <div
       className={`collapsible 
-      ${isExpanded ? 'expanded' : ''}
-      ${context === 'full' ? 'full-context' : ''}
-      ${context === 'about' ? 'about-context' : ''}`}
+      ${isExpanded ? 'expanded' : ''}`}
     >
       <button
         className={`collapsible-button ${isExpanded ? 'expanded' : ''}`}

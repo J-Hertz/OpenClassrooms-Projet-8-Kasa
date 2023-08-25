@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../../components/Banner/Banner'
-import AccommodationFactory from '../../components/Accommodation/AccommodationFactory/AccommodationFactory'
+import AccommodationFactory from '../../components/Accommodation/AccommodationFactory/AccommodationFactory.jsx'
 import accommodationsData from '../../data/logements.json'
 import './home.scss'
 import bannerImgHome from '../../assets/banner-home.png'
@@ -16,9 +16,7 @@ function Home() {
           <AccommodationFactory
             key={accommodation.id}
             type="Card"
-            id={accommodation.id}
-            title={accommodation.title}
-            cover={accommodation.cover}
+            accommodation={accommodation}
           />
         ))}
       </div>
