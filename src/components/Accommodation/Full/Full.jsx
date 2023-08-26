@@ -36,7 +36,6 @@ function Full({ accommodation }) {
       <div className="full-collapsible-container">
         <Collapsible title="Description" content={accommodation.description} />
         <Collapsible
-          context="full"
           title="Équipements"
           content={accommodation.equipments.map((equipment) => (
             <li key={equipment}>{equipment}</li>
