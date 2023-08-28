@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer.jsx'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/OpenClassrooms-Projet-8-Kasa">
       <Header />
       <AppRouter />
       <Footer />
